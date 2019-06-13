@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sto.poc.usrstrgspi</groupId>
+	<artifactId>usr-strg-provider</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<spring.version>1.16.18</spring.version>
+		<keycloak.version>6.0.0</keycloak.version>
+		<hibernate.version>5.4.3.Final</hibernate.version>
+		<c3p0.version>0.9.5.4</c3p0.version>
+		<mysql.version>8.0.16</mysql.version>
+		<jboss-logging.version>3.3.1.Final</jboss-logging.version>
+	</properties>
+	
+	<build>
+		<plugins>
+		    <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-ear-plugin</artifactId>
+		        <version>2.10.1</version>
+		        <configuration>
+		            <version>7</version>
+		        </configuration>
+		    </plugin>
+		
+		    <plugin>
+		        <groupId>org.wildfly.plugins</groupId>
+		        <artifactId>wildfly-maven-plugin</artifactId>
+		        <version>1.2.0.Final</version>
+		        <configuration>
+		            <skip>true</skip>
+		        </configuration>
+		    </plugin>
+		</plugins>
+	</build>
+	
+	<modules>
+		<module>usr-strg-provider-module</module>
+		<module>usr-strg-provider-bundle</module>
+	</modules>
+</project>

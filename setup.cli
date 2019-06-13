@@ -1,0 +1,14 @@
+echo using D:/keycloak-6.0.1/standalone/configuration/standalone.xml
+
+embed-server --server-config=standalone.xml --std-out=echo
+
+echo SETUP: Begin Keycloak configuration...
+
+echo
+echo SETUP: User Storage Provider
+# Add dedicated storeage spi config element to allow configuring elements.
+/subsystem=keycloak-server/spi=storage:add()
+/subsystem=keycloak-server/spi=storage/provider=custom-jdbc-user-provider:add(enabled=true)
+/subsystem=keycloak-server/spi=storage/provider=custom-jdbc-user-provider:write-attribute(name=properties.jdbcConnection,value=jdbc:mysql://localhost:3306/dbname)
+
+echo SETUP: Completed
