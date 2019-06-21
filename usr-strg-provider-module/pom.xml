@@ -21,6 +21,12 @@
 			<version>${keycloak.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- Apache Directory LDAP Libraries -->
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-all</artifactId>
+		    <version>${apached.client.api.version}</version>
+		</dependency>
 		<!-- Hibernate dependencies in an ear -->
 		<dependency>
 		    <groupId>org.hibernate</groupId>
