@@ -39,6 +39,7 @@ public class LDAPUtil {
 	    				ldapConfig.setCredentials(ldapPass);
 	    				
 	    				DefaultLdapConnectionFactory conFactory = new DefaultLdapConnectionFactory(ldapConfig);
+	    				
 	    				conFactory.setTimeOut(ldapConTimeout);
 	    				
 	    				//Connection pool configuration

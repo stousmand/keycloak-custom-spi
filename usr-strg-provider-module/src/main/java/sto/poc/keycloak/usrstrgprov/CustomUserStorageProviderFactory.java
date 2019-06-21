@@ -115,7 +115,7 @@ public class CustomUserStorageProviderFactory implements UserStorageProviderFact
 											.label("LDAP Connection Timeout")
 											.helpText("The LDAP server connection timeout")
 											.type(ProviderConfigProperty.STRING_TYPE)
-											.defaultValue("10")
+											.defaultValue("120000")
 											.add()
 											.build();
 		
